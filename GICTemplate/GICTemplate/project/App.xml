@@ -6,7 +6,7 @@
         <page title="GICTemplate">
             <scroll-view background-color="00000066">
                 <stack-panel>
-                    <lable text="hello word" font-color="white" font-size="24" text-align="1" space-before="12"/>
+                    <lable text="你可以尝试编辑XML内容，然后点击右下角的relaod按钮来使得更改生效" font-color="black" font-size="14" text-align="1" space-before="12"/>
                 </stack-panel>
             </scroll-view>
         </page>

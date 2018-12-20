@@ -2,6 +2,10 @@
 #import <GICXMLLayout/GICXMLLayout.h>
 #import <GICXMLLayout/GICRouter.h>
 
+#if DEBUG
+#import "GICXMLLayoutDevTools.h"
+#endif
+
 @interface AppDelegate ()
 
 @end
@@ -15,10 +19,19 @@
     [GICXMLLayout regiterAllElements];
     [GICRouter regiterAllElements];
     
+#if DEBUG
+    // 设置根目录
+    [GICXMLLayout setRootUrl:@"http://localhost:8080"];
+    // 通过GIC来加载APP
+    [GICXMLLayoutDevTools loadAPPFromPath:@"App.xml"];
+#else
     // 设置根目录
     [GICXMLLayout setRootUrl:[[NSBundle mainBundle].bundlePath stringByAppendingPathComponent:@"project"]];
     // 通过GIC来加载APP
     [GICRouter loadAPPFromPath:@"App.xml"];
+#endif
+    
+    
     return YES;
 }
 

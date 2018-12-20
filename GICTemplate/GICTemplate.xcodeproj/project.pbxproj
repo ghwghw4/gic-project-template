@@ -14,6 +14,7 @@
 		37D4FCAE21CA336F00496B69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37D4FCAC21CA336F00496B69 /* LaunchScreen.storyboard */; };
 		37D4FCB121CA336F00496B69 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D4FCB021CA336F00496B69 /* main.m */; };
 		37D4FCC021CA380400496B69 /* project in Resources */ = {isa = PBXBuildFile; fileRef = 37D4FCBF21CA380400496B69 /* project */; };
+		37D4FCCE21CB2EAF00496B69 /* GICXMLLayoutDevTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D4FCCC21CB2EAF00496B69 /* GICXMLLayoutDevTools.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		37D4FCAF21CA336F00496B69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37D4FCB021CA336F00496B69 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		37D4FCBF21CA380400496B69 /* project */ = {isa = PBXFileReference; lastKnownFileType = folder; path = project; sourceTree = "<group>"; };
+		37D4FCCC21CB2EAF00496B69 /* GICXMLLayoutDevTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GICXMLLayoutDevTools.m; sourceTree = "<group>"; };
+		37D4FCCD21CB2EAF00496B69 /* GICXMLLayoutDevTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GICXMLLayoutDevTools.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 				37D4FCB821CA37FB00496B69 /* js */,
 				37D4FCB921CA37FB00496B69 /* elements */,
 				37D4FCBA21CA37FB00496B69 /* behaviors */,
+				37D4FCCB21CB2EAF00496B69 /* hotreload */,
 			);
 			path = gic;
 			sourceTree = "<group>";
@@ -104,6 +108,15 @@
 			children = (
 			);
 			path = behaviors;
+			sourceTree = "<group>";
+		};
+		37D4FCCB21CB2EAF00496B69 /* hotreload */ = {
+			isa = PBXGroup;
+			children = (
+				37D4FCCD21CB2EAF00496B69 /* GICXMLLayoutDevTools.h */,
+				37D4FCCC21CB2EAF00496B69 /* GICXMLLayoutDevTools.m */,
+			);
+			path = hotreload;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +193,7 @@
 				37D4FCA621CA336E00496B69 /* ViewController.m in Sources */,
 				37D4FCB121CA336F00496B69 /* main.m in Sources */,
 				37D4FCA321CA336E00496B69 /* AppDelegate.m in Sources */,
+				37D4FCCE21CB2EAF00496B69 /* GICXMLLayoutDevTools.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
