@@ -20,13 +20,14 @@
     [GICRouter regiterAllElements];
     
 #if DEBUG
+    // NOTE: 运行之前，请先使用VSCode打开工程文件夹，然后安装 "GICVSCodeExtension"插件，VSCode会自动启动http服务器，并且会启动一个 websocket ，这样会你直接在VSCode中使用"cmd+r"快捷键来实现"hotreload"功能
     // 设置根目录
     [GICXMLLayout setRootUrl:@"http://localhost:8080"];
     // 通过GIC来加载APP
     [GICXMLLayoutDevTools loadAPPFromPath:@"App.xml"];
 #else
     // 设置根目录
-    [GICXMLLayout setRootUrl:[[NSBundle mainBundle].bundlePath stringByAppendingPathComponent:@"project"]];
+    [GICXMLLayout setRootUrl:[[NSBundle mainBundle].bundlePath stringByAppendingPathComponent:@"build/project"]];
     // 通过GIC来加载APP
     [GICRouter loadAPPFromPath:@"App.xml"];
 #endif
