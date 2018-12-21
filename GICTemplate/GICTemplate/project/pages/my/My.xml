@@ -1,0 +1,11 @@
+<nav background-color="white">
+    <page title="我的">
+        <stack-panel justify-content="1">
+            <control size="100 44" background-color="black" align-self="3" corner-radius="5" event-tap="js:CheckPackageUpdate()">
+                <dock-panel>
+                    <lable text="检查更新" font-color="white" font-size="16" />
+                </dock-panel>
+            </control>
+        </stack-panel>
+    </page>
+</nav>

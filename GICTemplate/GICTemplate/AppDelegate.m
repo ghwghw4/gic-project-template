@@ -2,9 +2,13 @@
 #import <GICXMLLayout/GICXMLLayout.h>
 #import <GICXMLLayout/GICRouter.h>
 #import <GICXMLLayout/GICJSAPIManager.h>
+#import <GICXMLLayout/GICElementsCache.h>
 
 #import "JSAPIExtension.h"
 #import "PackageManager.h"
+
+#pragma mark 自定义元素
+#import "TabControllerElements.h"
 
 @interface AppDelegate ()
 
@@ -19,6 +23,9 @@
     // 注册gic类库默认所有元素
     [GICXMLLayout regiterAllElements];
     [GICRouter regiterAllElements];
+    
+    //注册自定义元素
+    [GICElementsCache registElement:[TabControllerElements class]];
     
     // 注册JSAPI
     [GICJSAPIManager addJSAPIRegisterClass:[JSAPIExtension class]];

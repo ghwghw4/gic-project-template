@@ -18,6 +18,8 @@
 		37D4FCDC21CB82F700496B69 /* PackageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D4FCDB21CB82F700496B69 /* PackageManager.m */; };
 		37D4FCEC21CC869700496B69 /* project in Resources */ = {isa = PBXBuildFile; fileRef = 37D4FCEB21CC869700496B69 /* project */; };
 		37D4FCEF21CC86B300496B69 /* JSAPIExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D4FCED21CC86B200496B69 /* JSAPIExtension.m */; };
+		37D4FCF621CC98FC00496B69 /* TabControllerElements.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D4FCF521CC98FC00496B69 /* TabControllerElements.m */; };
+		37D4FCF921CC999500496B69 /* TabItemElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D4FCF821CC999500496B69 /* TabItemElement.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,10 @@
 		37D4FCEB21CC869700496B69 /* project */ = {isa = PBXFileReference; lastKnownFileType = folder; name = project; path = build/project; sourceTree = "<group>"; };
 		37D4FCED21CC86B200496B69 /* JSAPIExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAPIExtension.m; sourceTree = "<group>"; };
 		37D4FCEE21CC86B200496B69 /* JSAPIExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAPIExtension.h; sourceTree = "<group>"; };
+		37D4FCF421CC98FC00496B69 /* TabControllerElements.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabControllerElements.h; sourceTree = "<group>"; };
+		37D4FCF521CC98FC00496B69 /* TabControllerElements.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabControllerElements.m; sourceTree = "<group>"; };
+		37D4FCF721CC999500496B69 /* TabItemElement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabItemElement.h; sourceTree = "<group>"; };
+		37D4FCF821CC999500496B69 /* TabItemElement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabItemElement.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +117,10 @@
 		37D4FCB921CA37FB00496B69 /* elements */ = {
 			isa = PBXGroup;
 			children = (
+				37D4FCF421CC98FC00496B69 /* TabControllerElements.h */,
+				37D4FCF521CC98FC00496B69 /* TabControllerElements.m */,
+				37D4FCF721CC999500496B69 /* TabItemElement.h */,
+				37D4FCF821CC999500496B69 /* TabItemElement.m */,
 			);
 			path = elements;
 			sourceTree = "<group>";
@@ -205,7 +215,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				37D4FCA621CA336E00496B69 /* ViewController.m in Sources */,
+				37D4FCF621CC98FC00496B69 /* TabControllerElements.m in Sources */,
 				37D4FCB121CA336F00496B69 /* main.m in Sources */,
+				37D4FCF921CC999500496B69 /* TabItemElement.m in Sources */,
 				37D4FCDC21CB82F700496B69 /* PackageManager.m in Sources */,
 				37D4FCEF21CC86B300496B69 /* JSAPIExtension.m in Sources */,
 				37D4FCA321CA336E00496B69 /* AppDelegate.m in Sources */,

@@ -1,0 +1,15 @@
+<nav background-color="white">
+    <page title="首页">
+        <scroll-view background-color="white">
+            <stack-panel>
+                <lable font-color="black" font-size="14" text-align="1" space-before="12">
+                    <s text="你可以尝试编辑XML内容，然后在VSCode使用" />
+                    <s text="'cmd+r'" font-color="red" />
+                    <s text="快捷键" />
+                    <s text="(也可以在右键菜单中选择)" font-color="red" />
+                    <s text="来获得hotrealod 功能" />
+                </lable>
+            </stack-panel>
+        </scroll-view>
+    </page>
+</nav>

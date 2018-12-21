@@ -23,7 +23,7 @@
 
 #define mark 热重载相关宏
 #warning 开发的时候修改如下配置
-#define HotReloading NO
+#define HotReloading YES
 #define HotReloadUrl @"http://localhost:8080"
 
 @implementation PackageManager
