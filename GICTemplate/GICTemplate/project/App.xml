@@ -1,19 +1,6 @@
 <app>
     <!--等同于创建一个UINavigationController,并且将背景色设为 white-->
     <nav background-color="white">
-        <!--等同于创建一个UIViewController，并且将页面的title设为"GIC教程"-->
-        <page title="GICTemplate">
-            <scroll-view background-color="00000066">
-                <stack-panel>
-                    <lable font-color="black" font-size="14" text-align="1" space-before="12">
-                        <s text="你可以尝试编辑XML内容，然后在VSCode使用" />
-                        <s text="'cmd+r'" font-color="red"/>
-                        <s text="快捷键" />
-                        <s text="(也可以在右键菜单中选择)" font-color="red" />
-                        <s text="来获得hotrealod 功能" />
-                    </lable>
-                </stack-panel>
-            </scroll-view>
-        </page>
+        <root-page path="/pages/Index.xml"/>
     </nav>
 </app>

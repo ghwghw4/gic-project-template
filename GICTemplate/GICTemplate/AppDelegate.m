@@ -2,7 +2,9 @@
 #import <GICXMLLayout/GICXMLLayout.h>
 #import <GICXMLLayout/GICRouter.h>
 
-#if DEBUG
+#define HotReload 1
+
+#if HotReload
 #import "GICXMLLayoutDevTools.h"
 #endif
 
@@ -15,11 +17,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window.backgroundColor = [UIColor whiteColor];
     // 注册gic类库默认所有元素
     [GICXMLLayout regiterAllElements];
     [GICRouter regiterAllElements];
     
-#if DEBUG
+#if HotReload
     // NOTE: 运行之前，请先使用VSCode打开工程文件夹，然后安装 "GICVSCodeExtension"插件，VSCode会自动启动http服务器，并且会启动一个 websocket ，这样会你直接在VSCode中使用"cmd+r"快捷键来实现"hotreload"功能
     // 设置根目录
     [GICXMLLayout setRootUrl:@"http://localhost:8080"];
@@ -27,7 +30,7 @@
     [GICXMLLayoutDevTools loadAPPFromPath:@"App.xml"];
 #else
     // 设置根目录
-    [GICXMLLayout setRootUrl:[[NSBundle mainBundle].bundlePath stringByAppendingPathComponent:@"build/project"]];
+    [GICXMLLayout setRootUrl:[[NSBundle mainBundle].bundlePath stringByAppendingPathComponent:@"/project"]];
     // 通过GIC来加载APP
     [GICRouter loadAPPFromPath:@"App.xml"];
 #endif

@@ -14,8 +14,8 @@
 		37D4FCAE21CA336F00496B69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37D4FCAC21CA336F00496B69 /* LaunchScreen.storyboard */; };
 		37D4FCB121CA336F00496B69 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D4FCB021CA336F00496B69 /* main.m */; };
 		37D4FCCE21CB2EAF00496B69 /* GICXMLLayoutDevTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D4FCCC21CB2EAF00496B69 /* GICXMLLayoutDevTools.m */; };
-		37D4FCD421CB7C5500496B69 /* build in Resources */ = {isa = PBXBuildFile; fileRef = 37D4FCD321CB7C5500496B69 /* build */; };
 		37D4FCD621CB7C6900496B69 /* GICFileWatcher.html in Resources */ = {isa = PBXBuildFile; fileRef = 37D4FCD521CB7C6900496B69 /* GICFileWatcher.html */; };
+		37D4FCF321CC886E00496B69 /* project in Resources */ = {isa = PBXBuildFile; fileRef = 37D4FCF221CC886E00496B69 /* project */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,8 +31,8 @@
 		37D4FCB021CA336F00496B69 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		37D4FCCC21CB2EAF00496B69 /* GICXMLLayoutDevTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GICXMLLayoutDevTools.m; sourceTree = "<group>"; };
 		37D4FCCD21CB2EAF00496B69 /* GICXMLLayoutDevTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GICXMLLayoutDevTools.h; sourceTree = "<group>"; };
-		37D4FCD321CB7C5500496B69 /* build */ = {isa = PBXFileReference; lastKnownFileType = folder; path = build; sourceTree = "<group>"; };
 		37D4FCD521CB7C6900496B69 /* GICFileWatcher.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = GICFileWatcher.html; sourceTree = "<group>"; };
+		37D4FCF221CC886E00496B69 /* project */ = {isa = PBXFileReference; lastKnownFileType = folder; name = project; path = build/project; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +65,7 @@
 		37D4FCA021CA336E00496B69 /* GICTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				37D4FCD321CB7C5500496B69 /* build */,
+				37D4FCF221CC886E00496B69 /* project */,
 				37D4FCB721CA37FB00496B69 /* gic */,
 				37D4FCA121CA336E00496B69 /* AppDelegate.h */,
 				37D4FCA221CA336E00496B69 /* AppDelegate.m */,
@@ -181,7 +181,7 @@
 			files = (
 				37D4FCAE21CA336F00496B69 /* LaunchScreen.storyboard in Resources */,
 				37D4FCD621CB7C6900496B69 /* GICFileWatcher.html in Resources */,
-				37D4FCD421CB7C5500496B69 /* build in Resources */,
+				37D4FCF321CC886E00496B69 /* project in Resources */,
 				37D4FCAB21CA336F00496B69 /* Assets.xcassets in Resources */,
 				37D4FCA921CA336E00496B69 /* Main.storyboard in Resources */,
 			);
