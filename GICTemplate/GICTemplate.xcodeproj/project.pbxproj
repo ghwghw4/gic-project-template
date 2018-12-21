@@ -14,8 +14,10 @@
 		37D4FCAE21CA336F00496B69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37D4FCAC21CA336F00496B69 /* LaunchScreen.storyboard */; };
 		37D4FCB121CA336F00496B69 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D4FCB021CA336F00496B69 /* main.m */; };
 		37D4FCCE21CB2EAF00496B69 /* GICXMLLayoutDevTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D4FCCC21CB2EAF00496B69 /* GICXMLLayoutDevTools.m */; };
-		37D4FCD421CB7C5500496B69 /* build in Resources */ = {isa = PBXBuildFile; fileRef = 37D4FCD321CB7C5500496B69 /* build */; };
 		37D4FCD621CB7C6900496B69 /* GICFileWatcher.html in Resources */ = {isa = PBXBuildFile; fileRef = 37D4FCD521CB7C6900496B69 /* GICFileWatcher.html */; };
+		37D4FCDC21CB82F700496B69 /* PackageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D4FCDB21CB82F700496B69 /* PackageManager.m */; };
+		37D4FCEC21CC869700496B69 /* project in Resources */ = {isa = PBXBuildFile; fileRef = 37D4FCEB21CC869700496B69 /* project */; };
+		37D4FCEF21CC86B300496B69 /* JSAPIExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D4FCED21CC86B200496B69 /* JSAPIExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,8 +33,12 @@
 		37D4FCB021CA336F00496B69 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		37D4FCCC21CB2EAF00496B69 /* GICXMLLayoutDevTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GICXMLLayoutDevTools.m; sourceTree = "<group>"; };
 		37D4FCCD21CB2EAF00496B69 /* GICXMLLayoutDevTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GICXMLLayoutDevTools.h; sourceTree = "<group>"; };
-		37D4FCD321CB7C5500496B69 /* build */ = {isa = PBXFileReference; lastKnownFileType = folder; path = build; sourceTree = "<group>"; };
 		37D4FCD521CB7C6900496B69 /* GICFileWatcher.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = GICFileWatcher.html; sourceTree = "<group>"; };
+		37D4FCDA21CB82F600496B69 /* PackageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PackageManager.h; sourceTree = "<group>"; };
+		37D4FCDB21CB82F700496B69 /* PackageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PackageManager.m; sourceTree = "<group>"; };
+		37D4FCEB21CC869700496B69 /* project */ = {isa = PBXFileReference; lastKnownFileType = folder; name = project; path = build/project; sourceTree = "<group>"; };
+		37D4FCED21CC86B200496B69 /* JSAPIExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAPIExtension.m; sourceTree = "<group>"; };
+		37D4FCEE21CC86B200496B69 /* JSAPIExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAPIExtension.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,12 +71,14 @@
 		37D4FCA021CA336E00496B69 /* GICTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				37D4FCD321CB7C5500496B69 /* build */,
+				37D4FCEB21CC869700496B69 /* project */,
 				37D4FCB721CA37FB00496B69 /* gic */,
 				37D4FCA121CA336E00496B69 /* AppDelegate.h */,
 				37D4FCA221CA336E00496B69 /* AppDelegate.m */,
 				37D4FCA421CA336E00496B69 /* ViewController.h */,
 				37D4FCA521CA336E00496B69 /* ViewController.m */,
+				37D4FCDA21CB82F600496B69 /* PackageManager.h */,
+				37D4FCDB21CB82F700496B69 /* PackageManager.m */,
 				37D4FCA721CA336E00496B69 /* Main.storyboard */,
 				37D4FCAA21CA336F00496B69 /* Assets.xcassets */,
 				37D4FCAC21CA336F00496B69 /* LaunchScreen.storyboard */,
@@ -94,6 +102,8 @@
 		37D4FCB821CA37FB00496B69 /* js */ = {
 			isa = PBXGroup;
 			children = (
+				37D4FCEE21CC86B200496B69 /* JSAPIExtension.h */,
+				37D4FCED21CC86B200496B69 /* JSAPIExtension.m */,
 			);
 			path = js;
 			sourceTree = "<group>";
@@ -181,7 +191,7 @@
 			files = (
 				37D4FCAE21CA336F00496B69 /* LaunchScreen.storyboard in Resources */,
 				37D4FCD621CB7C6900496B69 /* GICFileWatcher.html in Resources */,
-				37D4FCD421CB7C5500496B69 /* build in Resources */,
+				37D4FCEC21CC869700496B69 /* project in Resources */,
 				37D4FCAB21CA336F00496B69 /* Assets.xcassets in Resources */,
 				37D4FCA921CA336E00496B69 /* Main.storyboard in Resources */,
 			);
@@ -196,6 +206,8 @@
 			files = (
 				37D4FCA621CA336E00496B69 /* ViewController.m in Sources */,
 				37D4FCB121CA336F00496B69 /* main.m in Sources */,
+				37D4FCDC21CB82F700496B69 /* PackageManager.m in Sources */,
+				37D4FCEF21CC86B300496B69 /* JSAPIExtension.m in Sources */,
 				37D4FCA321CA336E00496B69 /* AppDelegate.m in Sources */,
 				37D4FCCE21CB2EAF00496B69 /* GICXMLLayoutDevTools.m in Sources */,
 			);
