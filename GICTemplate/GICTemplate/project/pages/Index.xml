@@ -1,19 +1,61 @@
-<page title="GICTemplate">
+<page title="{{title}}">
+    <!-- 设定数据源 -->
+    <behaviors>
+        <script path="/pages/Index.js" />
+        <script private="true">
+            $el.dataContext = new IndexPage();
+        </script>
+    </behaviors>
+    <!-- 引入样式文件 -->
+    <style path="/style/Style.xml" />
     <scroll-view background-color="00000066">
-        <stack-panel>
-            <lable font-color="black" font-size="14" text-align="1" space-before="12">
-                <s text="你可以尝试编辑XML内容，然后在VSCode使用" />
-                <s text="'cmd+r'" font-color="red" />
-                <s text="快捷键" />
-                <s text="(也可以在右键菜单中选择)" font-color="red" />
-                <s text="来获得hotrealod 功能" />
-            </lable>
-            <control size="100 44" background-color="white" align-self="3" space-before="50" event-tap="js:CheckPackageUpdate()">
-                <dock-panel>
-                    <lable text="检查更新" />
-                </dock-panel>
-            </control>
-            <lable text="1.0.0" text-align="1" space-before="20" />
-        </stack-panel>
+        <inset-panel inset="10">
+            <stack-panel data-path="dataInfo" space="10">
+                <lable font-color="black" font-size="14" text-align="1" space-before="12">
+                    <s text="你可以尝试编辑XML内容，然后在VSCode使用" />
+                    <s text="'cmd+r'" font-color="red" />
+                    <s text="快捷键" />
+                    <s text="(也可以在右键菜单中选择)" font-color="red" />
+                    <s text="来获得hotrealod 功能" />
+                </lable>
+                <control size="100 44" background-color="white" align-self="3" space-before="50" event-tap="js:CheckPackageUpdate()">
+                    <dock-panel>
+                        <lable text="检查更新" />
+                    </dock-panel>
+                </control>
+                <lable text="v1.0.0" text-align="1" space-before="20" space-after="10" />
+
+                <!-- 黄历信息 -->
+                <lable text="黄历信息：" font-size="16"></lable>
+                <lable text="{{ '公历日期：'+year +'-'+month+'-'+day }}" />
+                <lable text="{{ '农历日期：'+lunarYear +'-'+lunarMonth+'-'+lunarDay }}" />
+                <lable text="{{ cnyear+'年'+cnmonth+'月'+cnday}}" />
+                <lable>
+                    <s text="宜&#x000A;" font-size="18" />
+                    <s text="{{suit}}" />
+                </lable>
+                <lable>
+                    <s text="忌&#x000A;" font-size="18" />
+                    <s text="{{taboo}}" />
+                </lable>
+                <lable>
+                    <s text="节日" font-size="18" />
+                </lable>
+                <if condition="{{festivalList.length>0}}">
+                    <stack-panel data-path="festivalList" is-horizon="true" space="10" wrap="true">
+                        <for>
+                            <inset-panel inset="5" background-color="white">
+                                <lable text="{{}}" font-color="black" />
+                            </inset-panel>
+                        </for>
+                    </stack-panel>
+                    <else>
+                        <inset-panel inset="5" background-color="white" align-self="1">
+                            <lable text="无" font-color="black" />
+                        </inset-panel>
+                    </else>
+                </if>
+            </stack-panel>
+        </inset-panel>
     </scroll-view>
 </page>
