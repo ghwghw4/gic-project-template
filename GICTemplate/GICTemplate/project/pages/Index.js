@@ -1,4 +1,4 @@
-require('/js/common/HttpRequest.js');
+const httpRequest = require('/js/common/HttpRequest.js');
 
 class IndexPage {
     constructor() {
@@ -18,7 +18,7 @@ class IndexPage {
                 if(jsonData.status === 200){
                     this.dataInfo = jsonData.data;
                 }else{
-                    this.showError('请求失败，请稍后重试！');
+                    this.showError('请求失败，该接口是第三方的接口，有调用限制！等3秒后再试！');
                 }
             },
             error: (ss)=>{

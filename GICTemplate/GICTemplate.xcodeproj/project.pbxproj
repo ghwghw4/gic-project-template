@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3790F49621D319E40060EA85 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3790F49521D319E40060EA85 /* JavaScriptCore.framework */; };
 		37D4FCA321CA336E00496B69 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D4FCA221CA336E00496B69 /* AppDelegate.m */; };
 		37D4FCA621CA336E00496B69 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D4FCA521CA336E00496B69 /* ViewController.m */; };
 		37D4FCA921CA336E00496B69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37D4FCA721CA336E00496B69 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3790F49521D319E40060EA85 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		37D4FC9E21CA336E00496B69 /* GICTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GICTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37D4FCA121CA336E00496B69 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		37D4FCA221CA336E00496B69 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -46,17 +48,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3790F49621D319E40060EA85 /* JavaScriptCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3790F49421D319E40060EA85 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3790F49521D319E40060EA85 /* JavaScriptCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		37D4FC9521CA336E00496B69 = {
 			isa = PBXGroup;
 			children = (
 				37D4FCA021CA336E00496B69 /* GICTemplate */,
 				37D4FC9F21CA336E00496B69 /* Products */,
+				3790F49421D319E40060EA85 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

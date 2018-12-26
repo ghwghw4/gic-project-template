@@ -30,8 +30,11 @@ function httpRequest(opt) {
         xmlHttp.send(postData);
     }
     else if (opt.method.toUpperCase() === 'GET') {
-
-        xmlHttp.open(opt.method, opt.url + '?' + postData, opt.async);
+        let fullUrl = opt.url;
+        if(postData.length>0){
+            fullUrl += '?' + postData;
+        }
+        xmlHttp.open(opt.method, fullUrl, opt.async);
         xmlHttp.send(null);
     }
     xmlHttp.onreadystatechange = function () {
@@ -47,3 +50,5 @@ function httpRequest(opt) {
         opt.error(xmlHttp.responseText);
     }
 }
+
+module.exports = httpRequest;

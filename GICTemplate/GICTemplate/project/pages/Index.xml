@@ -24,7 +24,6 @@
                     </dock-panel>
                 </control>
                 <lable text="v1.0.0" text-align="1" space-before="20" space-after="10" />
-
                 <!-- 黄历信息 -->
                 <lable text="黄历信息：" font-size="16"></lable>
                 <lable text="{{ '公历日期：'+year +'-'+month+'-'+day }}" />
@@ -38,6 +37,7 @@
                     <s text="忌&#x000A;" font-size="18" />
                     <s text="{{taboo}}" />
                 </lable>
+                <!-- 节日 -->
                 <lable>
                     <s text="节日" font-size="18" />
                 </lable>
@@ -46,6 +46,24 @@
                         <for>
                             <inset-panel inset="5" background-color="white">
                                 <lable text="{{}}" font-color="black" />
+                            </inset-panel>
+                        </for>
+                    </stack-panel>
+                    <else>
+                        <inset-panel inset="5" background-color="white" align-self="1">
+                            <lable text="无" font-color="black" />
+                        </inset-panel>
+                    </else>
+                </if>
+                <lable>
+                    <s text="节气" font-size="18" />
+                </lable>
+                <!-- 节气 -->
+                <if condition="{{ Object.keys(jieqi).length>0 }}">
+                    <stack-panel data-path="jieqi" is-horizon="true" space="10" wrap="true">
+                        <for>
+                            <inset-panel inset="5" background-color="white">
+                                <lable text="{{$v}}" font-color="black" />
                             </inset-panel>
                         </for>
                     </stack-panel>
