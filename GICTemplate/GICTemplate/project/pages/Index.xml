@@ -25,57 +25,65 @@
                 </control>
                 <!-- 加载json文件，读取版本号 -->
                 <lable text="{{ '当前包版本：v'+require('/package.json').version }}" text-align="1" space-before="20" space-after="10" />
-                <stack-panel space="10" data-path="dataInfo">
-                    <!-- 黄历信息 -->
-                    <lable text="黄历信息：" font-size="16"></lable>
-                    <lable text="{{ '公历日期：'+year +'-'+month+'-'+day }}" />
-                    <lable text="{{ '农历日期：'+lunarYear +'-'+lunarMonth+'-'+lunarDay }}" />
-                    <lable text="{{ cnyear+'年'+cnmonth+'月'+cnday}}" />
-                    <lable>
-                        <s text="宜&#x000A;" font-size="18" />
-                        <s text="{{suit}}" />
-                    </lable>
-                    <lable>
-                        <s text="忌&#x000A;" font-size="18" />
-                        <s text="{{taboo}}" />
-                    </lable>
-                    <!-- 节日 -->
-                    <lable>
-                        <s text="节日" font-size="18" />
-                    </lable>
-                    <if condition="{{festivalList.length>0}}">
-                        <stack-panel data-path="festivalList" is-horizon="true" space="10" wrap="true">
-                            <for>
-                                <inset-panel inset="5" background-color="white">
-                                    <lable text="{{}}" font-color="black" />
+                <control event-tap="js:this.getDateInfoAsync();" background-color="white" size="200 44" align-self="3" corner-radius="22">
+                    <dock-panel>
+                        <lable text="点击加载数据" />
+                    </dock-panel>
+                </control>
+                <!-- 单向绑定，监控dataInfo字段的改变 -->
+                <if condition="{{exp=dataInfo!=null,mode=1}}">
+                    <stack-panel space="10" data-path="dataInfo">
+                        <!-- 黄历信息 -->
+                        <lable text="黄历信息：" font-size="16"></lable>
+                        <lable text="{{ '公历日期：'+year +'-'+month+'-'+day }}" />
+                        <lable text="{{ '农历日期：'+lunarYear +'-'+lunarMonth+'-'+lunarDay }}" />
+                        <lable text="{{ cnyear+'年'+cnmonth+'月'+cnday}}" />
+                        <lable>
+                            <s text="宜&#x000A;" font-size="18" />
+                            <s text="{{suit}}" />
+                        </lable>
+                        <lable>
+                            <s text="忌&#x000A;" font-size="18" />
+                            <s text="{{taboo}}" />
+                        </lable>
+                        <!-- 节日 -->
+                        <lable>
+                            <s text="节日" font-size="18" />
+                        </lable>
+                        <if condition="{{festivalList.length>0}}">
+                            <stack-panel data-path="festivalList" is-horizon="true" space="10" wrap="true">
+                                <for>
+                                    <inset-panel inset="5" background-color="white">
+                                        <lable text="{{}}" font-color="black" />
+                                    </inset-panel>
+                                </for>
+                            </stack-panel>
+                            <else>
+                                <inset-panel inset="5" background-color="white" align-self="1">
+                                    <lable text="无" font-color="black" />
                                 </inset-panel>
-                            </for>
-                        </stack-panel>
-                        <else>
-                            <inset-panel inset="5" background-color="white" align-self="1">
-                                <lable text="无" font-color="black" />
-                            </inset-panel>
-                        </else>
-                    </if>
-                    <lable>
-                        <s text="节气" font-size="18" />
-                    </lable>
-                    <!-- 节气 -->
-                    <if condition="{{ Object.keys(jieqi).length>0 }}">
-                        <stack-panel data-path="jieqi" is-horizon="true" space="10" wrap="true">
-                            <for>
-                                <inset-panel inset="5" background-color="white">
-                                    <lable text="{{$v}}" font-color="black" />
+                            </else>
+                        </if>
+                        <lable>
+                            <s text="节气" font-size="18" />
+                        </lable>
+                        <!-- 节气 -->
+                        <if condition="{{ Object.keys(jieqi).length>0 }}">
+                            <stack-panel data-path="jieqi" is-horizon="true" space="10" wrap="true">
+                                <for>
+                                    <inset-panel inset="5" background-color="white">
+                                        <lable text="{{$v}}" font-color="black" />
+                                    </inset-panel>
+                                </for>
+                            </stack-panel>
+                            <else>
+                                <inset-panel inset="5" background-color="white" align-self="1">
+                                    <lable text="无" font-color="black" />
                                 </inset-panel>
-                            </for>
-                        </stack-panel>
-                        <else>
-                            <inset-panel inset="5" background-color="white" align-self="1">
-                                <lable text="无" font-color="black" />
-                            </inset-panel>
-                        </else>
-                    </if>
-                </stack-panel>
+                            </else>
+                        </if>
+                    </stack-panel>
+                </if>
             </stack-panel>
         </inset-panel>
     </scroll-view>
