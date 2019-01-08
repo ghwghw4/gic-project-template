@@ -18,7 +18,7 @@
                     <s text="(也可以在右键菜单中选择)" font-color="red" />
                     <s text="来获得hotrealod 功能" />
                 </lable>
-                <lable text="想要HotReload工程的话，请先将Xcode中'PackageManager.m'文件的'HotReloading'宏设为YES即可。" font-color="red" font-size="14" text-align="1"/>
+                <lable text="想要HotReload功能的话，请先将Xcode中'PackageManager.m'文件的'HotReloading'宏设为1即可。" font-color="red" font-size="14" text-align="1"/>
                 <control size="100 44" background-color="white" align-self="3" space-before="50" event-tap="js:CheckPackageUpdate()">
                     <dock-panel>
                         <lable text="检查更新" />
