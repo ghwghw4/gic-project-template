@@ -23,7 +23,7 @@
 
 #define mark 热重载相关宏
 #warning 开发的时候修改如下配置
-#define HotReloading YES
+#define HotReloading 1
 #define HotReloadUrl @"http://localhost:8080"
 
 @implementation PackageManager
@@ -41,7 +41,7 @@
     [GICXMLLayout setRootUrl:[self checkRootPath]];
     
     // 加载页面
-#if HotReloading == YES
+#if HotReloading > 0
     [GICXMLLayoutDevTools loadAPPFromPath:@"/App.xml"];
 #else
     [GICRouter loadAPPFromPath:@"/App.xml"];
@@ -68,7 +68,7 @@
 }
 
 -(NSString *)checkRootPath{
-#if HotReloading == YES
+#if HotReloading > 0
     return HotReloadUrl;
 #endif
     /**
