@@ -1,0 +1,13 @@
+<page title="下一页">
+    <scroll-view background-color="white">
+        <inset-panel inset="10">
+            <stack-panel>
+                <control size="100 44" background-color="black" align-self="3" corner-radius="5" event-tap="js:Router.goBack()">
+                    <dock-panel>
+                        <lable text="返回上一页" font-color="white" font-size="16" />
+                    </dock-panel>
+                </control>
+            </stack-panel>
+        </inset-panel>
+    </scroll-view>
+</page>

@@ -10,6 +10,20 @@
 #pragma mark 自定义元素
 #import "TabControllerElements.h"
 
+// 通过方法交换实现 UIViewController 的 hidesBottomBarWhenPushed属性
+@implementation UIViewController (TabPage)
++(void)initialize{
+    Method method1 = class_getInstanceMethod([self class], @selector(hidesBottomBarWhenPushed));
+    Method method2 = class_getInstanceMethod([self class], @selector(tabpage_hidesBottomBarWhenPushed));
+    method_exchangeImplementations(method1, method2);
+}
+
+-(BOOL)tabpage_hidesBottomBarWhenPushed{
+    return self.navigationController.viewControllers.count>1;
+}
+@end
+
+
 @interface AppDelegate ()
 
 @end
